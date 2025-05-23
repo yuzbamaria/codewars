@@ -8,7 +8,12 @@
 
 function isIsogram(str){
     const arrOfChars = str.toLowerCase().split(''); 
-    const value = arrOfChars.filter((char, i) => arrOfChars.indexOf(char) === i);
+    console.log(arrOfChars)
+    const value = arrOfChars.filter((char, i) => {
+        console.log(`First occurance index: ${arrOfChars.indexOf(char)}, index: ${i}`);
+        return arrOfChars.indexOf(char) === i;
+    }
+);
     if (str.length === value.length) {
         return true; 
     } else {
